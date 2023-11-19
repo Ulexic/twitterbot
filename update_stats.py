@@ -46,10 +46,14 @@ def updtate_stats():
       json.dump(stats, file, indent=3, separators=(',', ': '))
 
 def main():
-   if sys.argv[1] == "-u":
+   if len(sys.argv) != 2:
+      print(f"Invalid number of arguments: {len(sys.argv)} use -u to update stats or -r to reset stats")
+   elif sys.argv[1] == "-u":
       updtate_stats()
    elif sys.argv[1] == "-r":
       reset_stats()
+   else:
+      print(f"Invalid argument: {sys.argv[1]} use -u to update stats or -r to reset stats")
    
 if __name__ == "__main__":
    main()
