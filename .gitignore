@@ -1,7 +1,4 @@
 __pycache__/
 venv/
-config.py
 .gitlab-ci.yml
 log.txt
-lyrics.txt
-stats.json
